@@ -12,79 +12,88 @@
   <body>
     <!-- HEADER -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div class="container text-light">
+      <div class="container">
           <a class="navbar-brand" href="index.html">
               <img src="src/vanilla.svg" alt="" width="30" height="25" class="d-inline-block align-text-top">
               Vanilla Games
           </a>
-          <div class="navbar-nav mx-auto">
-              <a class="nav-link active" href="index.html">Home</a>
-              <a class="nav-link" href="proyecto.html">Top5 Proyectos</a>
-              <a class="nav-link" href="#">Acerca de</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+              <div class="navbar-nav">
+                  <a class="nav-link active" href="index.html">Home</a>
+                  <a class="nav-link" href="proyecto.html">Top5 Proyectos</a>
+                  <a class="nav-link" href="#">Acerca de</a>
+              </div>
+              <ul class="nav">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        PROYECTOS <img src="src/usuario.png" alt="Dropdown Icon" width="30" height="30">
+                    </a>
+                    <ul class="dropdown-menu text-start" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="proyecto.html">Panel proyectos</a></li>
+                        <li><a class="dropdown-item" href="editar.html">Editar Perfil</a></li>
+                        <li><a class="dropdown-item" href="panelProyecto.html">Panel administración proyectos</a></li>
+                        <li><a class="dropdown-item" href="panelUsuario.html">Panel administración usuarios</a></li>
+                        <li><a class="dropdown-item" href="nuevo.html">Nuevo proyecto</a></li>
+                        <li><a class="dropdown-item" href="detalle.html">Detalle Proyecto</a></li>
+                    </ul>
+                </li>
+              </ul>
           </div>
-          <ul class="nav">
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle text-light" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">
-                  PROYECTOS <img src="src/usuario.png" alt="Dropdown Icon" width="30" height="30">
-                </a>
-                <ul class="dropdown-menu text-start">
-                  <li><a class="dropdown-item" href="proyecto.html">Panel proyectos</a></li>
-                  <li><a class="dropdown-item" href="editar.html">Editar Perfil</a></li>
-                  <li><a class="dropdown-item" href="panelProyecto.html">Panel administración proyectos</a></li>
-                  <li><a class="dropdown-item" href="panelUsuario.html">Panel administración usuarios</a></li>
-                  <li><a class="dropdown-item" href="nuevo.html">Nuevo proyecto</a></li>
-                  <li><a class="dropdown-item" href="detalle.html">Detalle Proyecto</a></li>
-                </ul>
-            </li>
-          </ul>
       </div>
     </nav>
-  
+
     <!-- MAIN -->
     <div class="container mt-5">
-      <h1 class="mt-3 mb-5">Edicion del proyecto</h1>
+      <h1 class="mt-3 mb-4">Edición del proyecto</h1>
       <div class="text-end">
         <a href="proyecto.html"><button class="btn border"><i class="fa-solid text-secondary me-2 fa-arrow-right-to-bracket fa-rotate-180"></i>Volver</button></a>
       </div>
       <div class="row">
-        <div class="col-md-4">
-          <img class="w-100" src="src/tresraya.jpeg" alt="">
-          <div class="mb-3 mt-3">
-            <label for="InputNombre1" class="form-label"><strong>URL imagen:</strong></label>
-            <input type="text" class="form-control" id="repositorio" value="http://enlaceImagen.com">
+          <div class="col-md-4 mb-3 mb-md-0">
+              <img class="w-100" src="src/tresraya.jpeg" alt="">
+              <div class="mt-3">
+                  <label for="InputNombre1" class="form-label"><strong>URL imagen:</strong></label>
+                  <input type="text" class="form-control" id="repositorio" value="http://enlaceImagen.com">
+              </div>
           </div>
-        </div>
-        <div class="col-md-7">
-          <form>
-            <div class="mb-3">
-              <label for="nombre" class="form-label"><strong>Nombre:</strong></label>
-              <input type="text" class="form-control" id="nombre" value="Nombre Autor">
-            </div>
-            <div class="mb-3">
-              <label for="descripcion" class="form-label"><strong>Descripción:</strong></label>
-              <textarea class="form-control text-end" id="descripcion" rows="5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam facilis repudiandae, vitae optio a voluptate harum doloribus ipsam laudantium culpa officia beatae quibusdam quaerat nulla rem maxime. Minus, eligendi culpa.</textarea>
-            </div>
-            <div class="mb-3">
-              <label for="estado" class="form-label"><strong>Estado:</strong></label>
-              <input type="text" class="form-control" id="estado" value="Estado">
-            </div>
-            <div class="mb-3">
-              <label for="fecha" class="form-label"><strong>Fecha:</strong></label>
-              <input type="date" class="form-control" id="fecha" >
-            </div>
-            <div class="mb-3">
-              <label for="enlace" class="form-label"><strong>Enlace:</strong></label>
-              <input type="text" class="form-control" id="enlace" value="http://enlace.com">
-            </div>
-            <div class="mb-3">
-              <label for="repositorio" class="form-label"><strong>Repositorio:</strong></label>
-              <input type="text" class="form-control" id="repositorio" value="user.github.com/123456">
-            </div>
-            <a href="proyecto.html"><button type="submit" class="btn btn-success">Subir proyecto</button></a>
-          </form>
-        </div>
+          <div class="col-md-8">
+              <form>
+                  <div class="mb-3">
+                      <label for="nombre" class="form-label"><strong>Nombre:</strong></label>
+                      <input type="text" class="form-control" id="nombre" value="Nombre Autor">
+                  </div>
+                  <div class="mb-3">
+                      <label for="descripcion" class="form-label"><strong>Descripción:</strong></label>
+                      <textarea class="form-control" id="descripcion"
+                          rows="5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam facilis repudiandae, vitae optio a voluptate harum doloribus ipsam laudantium culpa officia beatae quibusdam quaerat nulla rem maxime. Minus, eligendi culpa.</textarea>
+                  </div>
+                  <div class="row">
+                      <div class="col-md-6 mb-3">
+                          <label for="estado" class="form-label"><strong>Estado:</strong></label>
+                          <input type="text" class="form-control" id="estado" value="Estado">
+                      </div>
+                      <div class="col-md-6 mb-3">
+                          <label for="fecha" class="form-label"><strong>Fecha:</strong></label>
+                          <input type="date" class="form-control" id="fecha">
+                      </div>
+                  </div>
+                  <div class="mb-3">
+                      <label for="enlace" class="form-label"><strong>Enlace:</strong></label>
+                      <input type="text" class="form-control" id="enlace" value="http://enlace.com">
+                  </div>
+                  <div class="mb-3">
+                      <label for="repositorio" class="form-label"><strong>Repositorio:</strong></label>
+                      <input type="text" class="form-control" id="repositorio" value="user.github.com/123456">
+                  </div>
+                  <a href="proyecto.html"><button type="submit" class="btn btn-success">Subir proyecto</button></a>
+              </form>
+          </div>
       </div>
     </div>
+
 
     <!-- FOOTER -->
     <div class="fixed-bottom text-center bg-secondary py-3">
